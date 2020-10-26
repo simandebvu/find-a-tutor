@@ -9,6 +9,7 @@
     Tutor.create(
         name: "Bender Rodriguez Unit: #{i+1}",
         links: "www.youtube.com",
-        description: "A very kewl tutor- Bender is great!"
+        description: "A very kewl tutor- Bender is great!",
+        image: "https://picsum.photos/200/300"
     )
 end
