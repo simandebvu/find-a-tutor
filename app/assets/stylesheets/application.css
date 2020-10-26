@@ -26,8 +26,10 @@
     color: #293241;
   }
   .custom-button.btn {
-    background-color: #293241;
-    color: #FFF;
+    padding: 8px;
+    color: #FFFFFF;
+    background-color: #ec5200;
+    border-radius: 20px;
     border: none;
   }
   .custom-button.btn:hover {
