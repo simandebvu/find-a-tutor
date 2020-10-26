@@ -1,4 +1,5 @@
 class Api::V1::TutorsController < ApplicationController
+  before_action :authenticate_user!
   def index
     tutor = Tutor.all.order(created_at: :desc)
     render json: tutor
