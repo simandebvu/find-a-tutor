@@ -95,15 +95,15 @@ class Tutor extends React.Component {
           <div className="row">
             <div className="col-sm-12 col-lg-3">
               <ul className="list-group">
-                <h5 className="mb-2">links</h5>
+                <h5 className="mb-2">Links</h5>
                 {linksList}
               </ul>
             </div>
             <div className="col-sm-12 col-lg-7">
-              <h5 className="mb-2">Preparation descriptions</h5>
+              <h5 className="mb-2">Description</h5>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: `${tutorLink}`
+                  __html: `${tutor.description}`
                 }}
               />
             </div>
