@@ -11,7 +11,7 @@ export default (
       <Route path="/" exact component={Home} />
       <Route path="/tutors" exact component={Tutors} />
       <Route path="/tutor/:id" exact component={Tutor} />
-      <Route path="/tutor" exact component={NewTutor} />
+      <Route path="/new_tutor" exact component={NewTutor} />
     </Switch>
   </Router>
 );
