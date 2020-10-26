@@ -1,13 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BooksBg from 'images/books_bg.jpg'
+import Description from './Description'
+import Testimonials from './Testimonials'
+import Invite from './Invite'
+import ContactInfo from './ContactInfo'
 
 export default () => (
-  <div className="primary-color d-flex align-items-center justify-content-center">
-    <div className="jumbotron jumbotron-fluid bg-transparent">
+  <>
+  <div className="primary-color" style={{backgroundImage: `url(${BooksBg})`, objectFit: 'cover', maxHeight: '400px'}}>
+    <div className="jumbotron jumbotron-fluid bg-transparent home-intro">
       <div className="container secondary-color">
-        <h1 className="display-4">Find a Tutor</h1>
-        <p className="lead">
-          A curated list of recipes for the best homemade meal and delicacies.
+        <h1 className="display-4 text-white font-weight-bolder">Find a Tutor anywhere</h1>
+        <p className="lead text-white">
+          Only the best tutors will be available, for you. Rated by you ! 
         </p>
         <hr className="my-4" />
         <Link
@@ -15,9 +21,14 @@ export default () => (
           className="btn btn-lg custom-button"
           role="button"
         >
-          View Recipes
+          Start now
         </Link>
       </div>
     </div>
   </div>
+  <Description/>
+  <Testimonials/>
+  <Invite bg={BooksBg}/>
+  <ContactInfo/>
+  </>
 );
