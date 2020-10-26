@@ -8,7 +8,8 @@ class NewTutor extends React.Component {
       this.state = {
         name: "",
         links: "",
-        description: ""
+        description: "",
+        image: ""
       };
   
       this.onChange = this.onChange.bind(this);
@@ -30,17 +31,16 @@ class NewTutor extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const url = "/api/v1/tutors/create";
-    const { name, links, description } = this.state;
-
+    const { name, links, image, description } = this.state;
     if (name.length == 0 || links.length == 0 || description.length == 0)
       return;
 
     const body = {
       name,
       links,
+      image,
       description: description.replace(/\n/g, "<br> <br>")
     };
-
     const token = document.querySelector('meta[name="csrf-token"]').content;
     fetch(url, {
       method: "POST",
@@ -70,7 +70,7 @@ class NewTutor extends React.Component {
             </h1>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <label htmlFor="tutorName">tutor name</label>
+                <label htmlFor="tutorName">Tutors name</label>
                 <input
                   type="text"
                   name="name"
@@ -81,7 +81,18 @@ class NewTutor extends React.Component {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="tutorlinks">links</label>
+                <label htmlFor="tutorImage">Image URL</label>
+                <input
+                  type="text"
+                  name="image"
+                  id="tutorImage"
+                  className="form-control"
+                  required
+                  onChange={this.onChange}
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="tutorlinks">Links</label>
                 <input
                   type="text"
                   name="links"
@@ -91,10 +102,10 @@ class NewTutor extends React.Component {
                   onChange={this.onChange}
                 />
                 <small id="linksHelp" className="form-text text-muted">
-                  Separate each ingredient with a comma.
+                  Separate each link with a comma.
                 </small>
               </div>
-              <label htmlFor="description">Preparation descriptions</label>
+              <label htmlFor="description">I like this tutor because ?</label>
               <textarea
                 className="form-control"
                 id="description"
