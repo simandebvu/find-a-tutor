@@ -1,5 +1,4 @@
 class Api::V1::TutorsController < ApplicationController
-  
   before_action :authenticate_user!, only: [:create]
   def index
     tutor = Tutor.all.order(created_at: :desc)
@@ -25,7 +24,7 @@ class Api::V1::TutorsController < ApplicationController
 
   def destroy
     tutor&.destroy
-    render json: { message: 'Sucessfully Removed Tutor'}
+    render json: { message: 'Sucessfully Removed Tutor' }
   end
 
   private
@@ -35,6 +34,6 @@ class Api::V1::TutorsController < ApplicationController
   end
 
   def tutor
-    @tutor ||= Tutor.find(params[:id])    
+    @tutor ||= Tutor.find(params[:id])
   end
 end
