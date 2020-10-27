@@ -19,11 +19,11 @@
 }
 
 .bg_primary-color {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .primary-color {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .bg_secondary-color {
@@ -35,7 +35,7 @@
 }
 
 .custom-button.btn {
-  color: #ffffff;
+  color: #fff;
   background-color: #ec5200;
   border-radius: 20px;
   border: none;
