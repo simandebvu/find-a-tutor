@@ -14,52 +14,57 @@
  *= require toastr
  *= require_self
  */
- .toast-message{
-   color: #293241;
- }
- #toast-container > .toast-custom {
-  content: "\f00C";
+.toast-message {
+  color: #293241;
 }
 
-/* this will set the toastr style */
-.toast-custom {
-  background-color: purple;
+.bg_primary-color {
+  background-color: #ffffff;
 }
- .bg_primary-color {
-    background-color: #FFFFFF;
-  }
-  .primary-color {
-    background-color: #FFFFFF;
-  }
-  .bg_secondary-color {
-    background-color: #293241;
-  }
-  .secondary-color {
-    color: #293241;
-  }
-  .custom-button.btn {
-    padding: 8px;
-    color: #FFFFFF;
-    background-color: #ec5200;
-    border-radius: 20px;
-    border: none;
-  }
-  .custom-button.btn:hover {
-    color: #FFF !important;
-    border: none;
-  }
-  .hero {
-    width: 100vw;
-    height: 50vh;
-  }
-  .hero img {
-    object-fit: cover;
-    object-position: top;
-    height: 100%;
-    width: 100%;
-  }
-  .overlay {
-    height: 100%;
-    width: 100%;
-    opacity: 0.4;
-  }
+
+.primary-color {
+  background-color: #ffffff;
+}
+
+.bg_secondary-color {
+  background-color: #293241;
+}
+
+.secondary-color {
+  color: #293241;
+}
+
+.custom-button.btn {
+  color: #ffffff;
+  background-color: #ec5200;
+  border-radius: 20px;
+  border: none;
+}
+
+.custom-button.btn:hover {
+  color: #fff !important;
+  border: none;
+}
+
+.hero {
+  width: 100vw;
+  height: 50vh;
+}
+
+.hero img {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.card-img,
+.card-img-top {
+  height: 150px;
+}

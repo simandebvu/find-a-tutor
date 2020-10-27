@@ -17,7 +17,7 @@ export const Testimonials = () => {
                 </div>
                 <div className="card my-2" style={{ "width": "18rem" }}>
                     <div className='row'>
-                        <img className="rounded-circle mx-auto" src="https://via.placeholder.com/100x10" alt="User Image" style={{ width: '25px', height: '50px' }} />
+                        <img className="rounded-circle mx-auto" src="https://via.placeholder.com/100x10" alt="User Image" style={{ width: '45px', height: '50px' }} />
                     </div>
                     <div className="card-body">
                         <p className="card-text font-weight-bold">Bender</p>
