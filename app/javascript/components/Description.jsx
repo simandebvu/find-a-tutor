@@ -13,12 +13,12 @@ export const Description = () => {
                     <input type="button" value="LEARN MORE" className='btn btn-large text-white custom-button' />
                 </div>
                 <div className="col-md-4">
-                    <img src='https://via.placeholder.com/300' className = 'rounded' />
+                    <img src='https://media.giphy.com/media/d9TIXOKaA6HFm/giphy.gif' style={{ width: 200, height: 200 }} className='rounded' />
                 </div>
             </div>
             <div className="row mt-4">
                 <div className="col-md-4">
-                    <img src='https://via.placeholder.com/300' className ='rounded'/>
+                    <img src='https://media.giphy.com/media/6NVOQr1I5H1MA/giphy.gif' style={{ width: 200, height: 200 }} className='rounded' />
                 </div>
                 <div className="col-md-8">
                     <h3>Only the best for your loved ones</h3>
