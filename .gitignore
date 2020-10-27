@@ -8,7 +8,7 @@
 /public/assets
 /.pnp
 .pnp.js
-
+/log/*
 # testing
 /coverage
 
