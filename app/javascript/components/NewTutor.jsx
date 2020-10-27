@@ -1,27 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class NewTutor extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        name: "",
-        links: "",
-        description: "",
-        image: ""
-      };
-  
-      this.onChange = this.onChange.bind(this);
-      this.onSubmit = this.onSubmit.bind(this);
-      this.stripHtmlEntities = this.stripHtmlEntities.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      links: '',
+      description: '',
+      image: '',
+    };
 
-    
-  stripHtmlEntities(str) {
-    return String(str)
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
+    this.onChange = this.onChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.stripHtmlEntities = this.stripHtmlEntities.bind(this);
   }
 
   onChange(event) {
@@ -30,34 +25,42 @@ class NewTutor extends React.Component {
 
   onSubmit(event) {
     event.preventDefault();
-    const url = "/api/v1/tutors/create";
-    const { name, links, image, description } = this.state;
-    if (name.length == 0 || links.length == 0 || description.length == 0)
-      return;
+    const url = '/api/v1/tutors/create';
+    const {
+      name, links, image, description,
+    } = this.state;
+    if (name.length === 0 || links.length === 0 || description.length === 0) { return; }
 
     const body = {
       name,
       links,
       image,
-      description: description.replace(/\n/g, "<br> <br>")
+      description: description.replace(/\n/g, '<br> <br>'),
     };
     const token = document.querySelector('meta[name="csrf-token"]').content;
     fetch(url, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "X-CSRF-Token": token,
-        "Content-Type": "application/json"
+        'X-CSRF-Token': token,
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
     })
       .then(response => {
         if (response.ok) {
           return response.json();
         }
-        throw new Error("Network response was not ok.");
+        throw new Error('Network response was not ok.');
       })
       .then(response => this.props.history.push(`/tutor/${response.id}`))
-      .catch(error => console.log(error.message));
+      .catch(error => new Error(error.message));
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  stripHtmlEntities(str) {
+    return String(str)
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
   }
 
   render() {
@@ -126,7 +129,6 @@ class NewTutor extends React.Component {
       </div>
     );
   }
+}
 
-  }
-  
-  export default NewTutor;
+export default NewTutor;

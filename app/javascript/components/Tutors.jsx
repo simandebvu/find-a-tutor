@@ -1,22 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Tutors extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tutors: []
+      tutors: [],
     };
   }
+
   componentDidMount() {
-    const url = "/api/v1/tutors/index";
+    const url = '/api/v1/tutors/index';
     fetch(url).then(response => {
       if (response.ok) {
         return response.json();
       }
-      throw new Error("Bad Network!");
+      throw new Error('Bad Network!');
     }).then(response => this.setState({ tutors: response }))
-      .catch(() => this.props.history.push("/"));
+      // eslint-disable-next-line react/destructuring-assignment
+      .catch(() => this.props.history.push('/'));
   }
 
   render() {
@@ -27,17 +31,22 @@ class Tutors extends React.Component {
           <img
             src={tutor.image}
             className="card-img-top"
-            alt={`${tutor.name} image`}
+            alt={`${tutor.name}`}
           />
           <div className="card-body">
             <h5 className="card-title">{tutor.name}</h5>
             <Link to={`/tutor/${tutor.id}`} className="btn custom-button">
               View Profile
             </Link>
-            <Link to={`/api/v1/tutors/${tutor.id}/favorite?type=favorite`} className="btn  btn-success mx-2" data-method="put" style={{
-              borderRadius: '20px',
-              border: 'none',
-            }}>
+            <Link
+              to={`/api/v1/tutors/${tutor.id}/favorite?type=favorite`}
+              className="btn  btn-success mx-2"
+              data-method="put"
+              style={{
+                borderRadius: '20px',
+                border: 'none',
+              }}
+            >
               Favourite
             </Link>
           </div>
@@ -47,7 +56,9 @@ class Tutors extends React.Component {
     const noTutor = (
       <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
         <h4>
-          No tutors yet. Why not <Link to="/new_tutor">add one?</Link>
+          No tutors yet. Why not
+          {' '}
+          <Link to="/new_tutor">add one?</Link>
         </h4>
       </div>
     );
@@ -58,14 +69,14 @@ class Tutors extends React.Component {
             <div className="text-right mb-3">
               <Link to="/new_tutor" className="btn custom-button">
                 Create New Tutor
-                    </Link>
+              </Link>
             </div>
             <div className="row">
               {tutors.length > 0 ? allTutors : noTutor}
             </div>
             <Link to="/" className="btn btn-link">
               Home
-                  </Link>
+            </Link>
           </main>
         </div>
       </>
