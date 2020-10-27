@@ -1,5 +1,6 @@
 class Api::V1::TutorsController < ApplicationController
-  before_action :authenticate_user!
+  
+  before_action :authenticate_user!, only: [:create]
   def index
     tutor = Tutor.all.order(created_at: :desc)
     render json: tutor
@@ -27,7 +28,7 @@ class Api::V1::TutorsController < ApplicationController
     render json: { message: 'Sucessfully Removed Tutor'}
   end
 
-  private 
+  private
 
   def tutor_params
     params.permit(:name, :links, :description, :image)
