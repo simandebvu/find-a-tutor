@@ -34,7 +34,7 @@ class Tutors extends React.Component {
             <Link to={`/tutor/${tutor.id}`} className="btn custom-button">
               View Profile
             </Link>
-            <Link to={`/tutor/${tutor.id}`} className="btn  btn-success mx-2" style={{
+            <Link to={`/api/v1/tutors/${tutor.id}/favorite?type=favorite`} className="btn  btn-success mx-2" data-method="put" style={{
               borderRadius: '20px',
               border: 'none',
             }}>
