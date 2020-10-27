@@ -3,18 +3,6 @@ require 'rails_helper'
 describe 'Tutors', type: :request do
   let!(:tutors) { create_list(:tutor, 10) }
   let(:tutor_id) { tutors.last.id }
-  describe 'Get /api/v1/tutors/index' do
-    before { get '/api/v1/tutors/index' }
-
-    it 'return all tutors' do
-      expect(json).not_to be_empty
-      expect(json.size).to eq(10)
-    end
-
-    it 'return status code 200' do
-      expect(response).to have_http_status(200)
-    end
-  end
 
   describe 'GET /api/v1/show/:id' do
     before { get "/api/v1/show/#{tutor_id}" }

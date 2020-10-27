@@ -11,7 +11,7 @@ class Api::V1::TutorsController < ApplicationController
   end
 
   def create
-    tutor = Tutor.create!(tutor_params)
+    tutor = current_user.tutors.create!(tutor_params)
     if tutor
       render json: tutor
     else
