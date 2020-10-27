@@ -38,7 +38,7 @@ class Api::V1::TutorsController < ApplicationController
     else
       flash[:notice] = 'Nothing happened.'
     end
-    redirect_to "/tutors"
+    redirect_to '/tutors'
   end
 
   def destroy

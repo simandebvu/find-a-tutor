@@ -1,8 +1,8 @@
 FactoryBot.define do
   user = User.new
   user.email = 'bender@mail.com'
-  user.password = "awesomepassword"
-  user.password_confirmation = "awesomepassword"
+  user.password = 'awesomepassword'
+  user.password_confirmation = 'awesomepassword'
   user.save
   factory :tutor do
     user { user }
