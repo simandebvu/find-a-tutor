@@ -1,46 +1,56 @@
-# Calc-eat
+# Find A Tutor
 
 <br />
 <p align="center">
-  <a href="https://github.com/simandebvu/calc-eact/">
-    <img src="./public/logo192.png" alt="Logo" width="200" height="150">
+  <a href="https://github.com/simandebvu/find-a-tutor/">
+    <img src="./app/assets/images/react-on-rails.png" alt="Logo" width="200" height="150">
   </a>
 
-  <h3 align="center">Calc-eact</h3>
+  <h3 align="center">Find a Tutor</h3>
 
   <p align="center">
-    A React Based Project
+    A React On Rails Based Project
     <br />
-    <a href="https://github.com/simandebvu/calc-eact/issues/"><strong>Issues »</strong></a>
+    <a href="https://github.com/simandebvu/find-a-tutor/issues/"><strong>Issues »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/simandebvu/calc-eact/issues/">Report Bug</a>
+    <a href="https://github.com/simandebvu/find-a-tutor/issues/">Report Bug</a>
     ·
-    <a href="https://github.com/simandebvu/calc-eact/">Request Feature</a>
+    <a href="https://github.com/simandebvu/find-a-tutor/">Request Feature</a>
   </p>
 </p>
 
-> A calculator for Math-magicians Inc using create-react-app, a tool built by developers at Facebook to help you build React applications, saving you from time-consuming setup and configuration.
+> The project is based on a find your house app. But this is inspired with the current shift in the global scale- to finding a tutor. It has capability for users to create tutors, add to favourites and has been built with a test driven approach. Currently the user can:
+
+1. Log in the app,authenticated by devise
+2. The user is presented with a list of tutors they either created or created by other users.
+3. When a user selects a tutor, detailed information about the tutor is presented and the possibility add the tutor to favourites
+4. The user can access a list of favourite tutors 
 
 ## Table Of Contents
 
-- [Calc-eat](#calc-eat)
+- [Find A Tutor](#find-a-tutor)
   - [Table Of Contents](#table-of-contents)
   - [Built With](#built-with)
   - [Usage](#usage)
   - [Live Demo](#live-demo)
+  - [Automated Test](#automated-test)
+  - [Walkthrough Video and Deployment (Heroku)](#walkthrough-video-and-deployment-heroku)
   - [Authors](#authors)
   - [🤝 Contributing](#-contributing)
   - [Show your support](#show-your-support)
   - [Acknowledgments](#acknowledgments)
   - [📝 License](#-license)
 
-![screenshot](./public/app-screenshot.gif)
+![screenshot](./app/assets/images/app-screenshot.gif)
 
 ## Built With
 
 - Node.js
 - React
+- Ruby On Rails
+- ESLint
+- Rubocop
 - React-DOM
 - React-Create-App
 - npm
@@ -50,14 +60,14 @@
 ## Usage
 
 To have this app on your pc, you need to:
-* [download](https://github.com/simandebvu/calc-eact/archive/development.zip) or clone this repo:
+* [download](https://github.com/simandebvu/find-a-tutor/archive/development.zip) or clone this repo:
   - Clone with SSH:
   ```
-    git@github.com:simandebvu//calc-eact.git
+    git@github.com:simandebvu/find-a-tutor.git
   ```
   - Clone with HTTPS
   ```
-    https://github.com/simandebvu/calc-eact.git
+    https://github.com/simandebvu/find-a-tutor.git
   ```
 
 * In the project directory, you can run:
@@ -76,9 +86,19 @@ To have this app on your pc, you need to:
     - Your app is ready to be deployed!
  
 ## Live Demo 
+[Live Demo Link](https://find-a-tutor-zw.herokuapp.com/) :point_left:
 
-[Live Demo Link](#) :point_left:
+## Automated Test
+  Open the terminal in the project's root directory and run:
+  ```
+  $ bundle exec rspec
+  ```
+  - the following output will be generated
+  ![screenshot](./app/assets/images/testing-screenshot.gif)
 
+## Walkthrough Video and Deployment (Heroku)
+#
+##
 
 ## Authors
 
