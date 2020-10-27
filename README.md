@@ -35,7 +35,7 @@
   - [Usage](#usage)
   - [Live Demo](#live-demo)
   - [Automated Test](#automated-test)
-  - [Walkthrough Video and Deployment (Heroku)](#walkthrough-video-and-deployment-heroku)
+  - [Walkthrough Video](#walkthrough-video)
   - [Authors](#authors)
   - [🤝 Contributing](#-contributing)
   - [Show your support](#show-your-support)
@@ -96,9 +96,8 @@ To have this app on your pc, you need to:
   - the following output will be generated
   ![screenshot](./app/assets/images/testing-screenshot.gif)
 
-## Walkthrough Video and Deployment (Heroku)
-#
-##
+## Walkthrough Video
+[Live Video Link](https://www.loom.com/share/4a560d0f5a424f10a3275da97f210bd9) :point_left:
 
 ## Authors
 
